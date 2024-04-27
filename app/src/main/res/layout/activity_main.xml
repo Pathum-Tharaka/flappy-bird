@@ -12,7 +12,7 @@
         android:layout_width="188dp"
         android:layout_height="80dp"
         android:layout_centerInParent="true"
-        app:srcCompat="@drawable/startbutton"
+        app:srcCompat="@drawable/playbutton"
         android:onClick="startGame"/>
 
 
@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="Play"
+        android:text="@string/play"
         android:textSize="34sp"
         android:layout_below="@+id/imageButton1"
         android:layout_marginTop="10dp"
