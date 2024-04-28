@@ -15,4 +15,13 @@ class BitmapBank(private val res: Resources?) {
         get() = background.getWidth()
     val backgroundHeight: Int
         get() = background.getHeight()
+
+    public Bitmap scaleImage(Bitmap bitmap){
+        floatArrayOf() widthHeightRatio = getBackgroundWidth() / getBackgroundHeight();
+
+    int backgrounScaleWidth = (int) widthHeightRatio * AppConstants.SCREEN_HIEGHT;
+        return Bitmap.createScaledBitmap(bitmap,backgroundScaleWidth,AppConstants.SCREEN_HEIGHT false
+        )
+
+    }
 }
