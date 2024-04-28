@@ -19,6 +19,7 @@ class GameThread(private val surfaceHolder: SurfaceHolder) : Thread() {
             if (canvas != null) {
                 synchronized(surfaceHolder) {
                     AppConstants.getGameEngine().updateAndDrawBackgroundImage(canvas)
+                    AppConstants.getGameEngine().updateAndDrawBird(canvas)
                     // Unlocking the canvas
                     surfaceHolder.unlockCanvasAndPost(canvas)
                 }
@@ -35,12 +36,12 @@ class GameThread(private val surfaceHolder: SurfaceHolder) : Thread() {
             }
         }
     }
-    public boolean isRunning(){
-        return isRunning;
 
+    fun isRunning(): Boolean {
+        return isRunning
     }
-    public void setIsRunning(boolean state) {
-        isRunning = state;
 
+    fun setIsRunning(state: Boolean) {
+        isRunning = state
     }
 }

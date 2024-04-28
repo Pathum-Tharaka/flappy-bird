@@ -1,6 +1,7 @@
 package com.example.myapplicationbird
 
 import android.content.Context
+import android.view.MotionEvent
 import android.view.SurfaceHolder
 import android.view.SurfaceView
 
@@ -42,5 +43,12 @@ class GameView(context: Context?) : SurfaceView(context), SurfaceHolder.Callback
         holder.addCallback(this)
         isFocusable = true
         gameThread = GameThread(holder)
+    }
+
+    override fun onTouchEvent(event: MotionEvent?): Boolean {
+        if (event?.action == MotionEvent.ACTION_DOWN) {
+            AppConstants.getGameEngine().bird.setVelocity(AppConstants.VELOCITY_WHEN_JUMPED)
+        }
+        return true
     }
 }
