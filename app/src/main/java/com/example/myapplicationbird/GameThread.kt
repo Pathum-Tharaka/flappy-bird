@@ -35,4 +35,12 @@ class GameThread(private val surfaceHolder: SurfaceHolder) : Thread() {
             }
         }
     }
+    public boolean isRunning(){
+        return isRunning;
+
+    }
+    public void setIsRunning(boolean state) {
+        isRunning = state;
+
+    }
 }
